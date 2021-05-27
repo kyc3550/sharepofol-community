@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import pymysql
 import os
+from .secret_keys import *
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -81,12 +83,10 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'HOST' : 'community.ckfllyendzfk.ap-northeast-2.rds.amazonaws.com',
         'NAME': 'community',
-        'USER' : 'kyc',
-        'PASSWORD' : 'asd123123',
+        'USER' : MY_DATABASE_USER,
+        'PASSWORD' : MT_DATABASE_PASSWORD,
         'PORT' : '3306',
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-    }
+        
     },
     
 }
