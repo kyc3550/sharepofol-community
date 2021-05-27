@@ -12,7 +12,7 @@ class Category(models.Model):
     slug = models.SlugField(max_length=200, db_index=True, unique=True, allow_unicode=True)
 
     class Meta:
-        Ordering = ['name']
+        ordering = ['name']
         verbose_name = 'category'
         verbose_name_plural = 'categories'
 
@@ -24,17 +24,17 @@ class Category(models.Model):
 
 class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_post')
-    title = models.CharField(max_lengt=200)
+    title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, db_index=True, unique=True, allow_unicode=True)
     title_image = models.ImageField(blank=True)
-    comtemt = models.TextField()
+    coment = models.TextField()
+    header_coment = models.TextField()
     createData = models.DateTimeField(auto_now=True)
     updateDate = models.DateTimeField(auto_now=True)
-    category = models.ManyToManyField(Category, on_delete=models.SET_NULL,null=True,related_name='posts')
-    view_cnt = models.IntegerField(max_langth=50)
-    like_users = models.ManyToManyField(User, related_name='like_posts')
+    category = models.ForeignKey(Category, on_delete=models.SET_NULL,null=True,related_name='posts')
     hits = models.PositiveBigIntegerField(default=0)
-    
+    available_post = models.BooleanField('post', default=True)
+
     def __str__(self):
         return self.title
 
