@@ -25,24 +25,15 @@
                     <!-- Blog post-->
                     {% for post in posts %}
                     <div class="card mb-4">
-                        <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
+                        <a href="#!"><img class="card-img-top" src="{{potho.image.url}}" alt="Post Image" /></a>
                         <div class="card-body">
                             <div class="small text-muted">{{ post.createData }}</div>
                             <h2 class="card-title h4">{{ post.title }}</h2>
                             <p class="card-text">{{ post.header_coment }}</p>
-                            <a class="btn btn-primary" href="#!">Read more →</a>
+                            <a class="btn btn-primary" href="{{post.get_absolute_url}}">Read more →</a>
                         </div>
                     </div>
                     {% endfor %}
-                    <div class="card mb-4">
-                        <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
-                        <div class="card-body">
-                            <div class="small text-muted">January 1, 2021</div>
-                            <h2 class="card-title h4">Post Title</h2>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
-                            <a class="btn btn-primary" href="#!">Read more →</a>
-                        </div>
-                    </div>
                 </div>
             </div>
             <!-- Pagination-->
