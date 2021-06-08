@@ -19,7 +19,9 @@
                         <a class="badge bg-secondary text-decoration-none link-light" href="#!">{{post.category}}</a>
                     </header>
                     <!-- Preview image figure-->
-                    <figure class="mb-4"><img class="img-fluid rounded" src="https://dummyimage.com/900x400/ced4da/6c757d.jpg" alt="..." /></figure>
+                    {% for photo in post.photo_set.all %}
+                    <figure class="mb-4"><img class="img-fluid rounded" src="{{photo.image.url}}" alt="..." width = '500'/></figure>
+                    {% endfor %}
                     <!-- Post content-->
                     <section class="mb-5">
                         <p class="fs-5 mb-4">{{post.coment}}</p>
