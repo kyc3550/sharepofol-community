@@ -1,5 +1,5 @@
-from django.shortcuts import render, get_object_or_404
-
+from django.shortcuts import render, get_object_or_404, redirect
+from django.views.generic.edit import DeleteView
 # Create your views here.
 
 from .models import *
@@ -25,3 +25,31 @@ def post_detail(request,id,post_slug=None):
     {
         'post':post
     })
+
+def upload(request):
+    categories = Category.objects.all()
+    if(request.method == 'POST'):
+        post = Post()
+        post.author = request.user
+        post.title = request.POST['title']
+        post.slug = post.title
+        post.coment = request.POST['coment']
+        post.header_coment = request.POST['header_coment']
+        post.category_id = request.POST['category']
+        post.save()
+        for image in request.FILES.getlist('images'):
+            photo = Photo()
+            photo.post = post
+            photo.image = image
+            photo.save()
+    
+        return redirect('/'+str(post.id)+'/'+str(post.slug))
+    else:
+        return render(request,'community/upload.html', {
+            'categories' : categories
+        })
+
+class PostDeleteView(DeleteView):
+    model = Post
+    success_url = '/'
+    template_name = 'community/delete.html'

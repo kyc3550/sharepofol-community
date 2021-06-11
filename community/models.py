@@ -25,7 +25,7 @@ class Category(models.Model):
 class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_post')
     title = models.CharField(max_length=200)
-    slug = models.SlugField(max_length=200, db_index=True, unique=True, allow_unicode=True)
+    slug = models.SlugField(max_length=200, db_index=True, allow_unicode=True)
     coment = models.TextField()
     header_coment = models.TextField()
     createData = models.DateTimeField(auto_now=True)
