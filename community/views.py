@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.views.generic.edit import DeleteView
+from django.views.generic.edit import DeleteView, UpdateView
 # Create your views here.
 
 from .models import *
@@ -53,3 +53,8 @@ class PostDeleteView(DeleteView):
     model = Post
     success_url = '/'
     template_name = 'community/delete.html'
+
+class PostUpdateView(UpdateView):
+    model = Post
+    fields = ['post_image','coment','header_coment']
+    template_name = 'community/update.html'
