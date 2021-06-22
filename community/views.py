@@ -65,6 +65,7 @@ def update(request,pk):
         post.coment = request.POST['coment']
         post.header_coment = request.POST['header_coment']
         post.category_id = request.POST['category']
+        post.photo_set.all().delete()
         post.save()
         for image in request.FILES.getlist('images'):
             photo = Photo()
