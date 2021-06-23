@@ -37,6 +37,11 @@
                     <section class="mb-5">
                         <p class="fs-5 mb-4">{{post.coment}}</p>
                     </section>
+                    <div align="right">
+                        <a href="{% url 'community:post_update' post.id %}">
+                        <button style="background-color: darkgray;" type="submit" class="btn btn-default">글 수정</button>
+                        </a>
+                    </div>
                 </article>
             </div>
 {% endblock %}
