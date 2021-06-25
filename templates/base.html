@@ -37,11 +37,11 @@
                 <div align="right">
                     {% if user.is_authenticated %}
                         <a href="#">{{ user.get_username }}</a>
-                        <a class="btn btn-default" href="{% url 'logout' %}" role="button">Logout</a>
+                        <a class="btn btn-default" href="{% url 'logout' %}" role="button">로그아웃</a>
                         
                     {% else %}
-                        <a class="btn btn-default" href="{% url 'login' %}" role="button">Login</a>
-                        
+                        <a class="btn btn-default" href="{% url 'login' %}" role="button">로그인</a>
+                        <a class="btn btn-default" href="{% url 'register' %}" role="button">회원가입</a>
                     {% endif %}
                 </div>
             </div>
