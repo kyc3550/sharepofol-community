@@ -38,9 +38,14 @@
                         <p class="fs-5 mb-4">{{post.coment}}</p>
                     </section>
                     <div align="right">
+                        {% if request.user == post.author %}
                         <a href="{% url 'community:post_update' post.id %}">
                         <button style="background-color: darkgray;" type="submit" class="btn btn-default">글 수정</button>
                         </a>
+                        <a href="{% url 'community:post_delete' post.id %}">
+                            <button  type="submit" class="btn btn-danger">글 삭제</button>
+                        </a>
+                        {% endif %}
                     </div>
                 </article>
             </div>
