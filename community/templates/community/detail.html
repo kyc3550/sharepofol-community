@@ -15,7 +15,7 @@
 
 {% block content %}
      <!-- Page content-->
-     <div class="container mt-2">
+    <div class="container mt-2">
         <div class="row">
             <div class="col-lg-12">
                 <!-- Post content-->
@@ -47,6 +47,12 @@
                         </a>
                         {% endif %}
                     </div>
+                    <section class="mb-5">
+                        {% load disqus_tags %}
+                        {% disqus_show_comments %}
+                    </section>
                 </article>
             </div>
+        </div>
+    </div>
 {% endblock %}

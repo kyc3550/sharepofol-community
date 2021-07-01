@@ -1,5 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic.edit import DeleteView
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 # Create your views here.
 
 from .models import *
@@ -27,6 +29,7 @@ def post_detail(request,id,post_slug=None):
         'post':post
     })
 
+@login_required
 def upload(request):
     categories = Category.objects.all()
     if(request.method == 'POST'):
@@ -50,7 +53,7 @@ def upload(request):
             'categories' : categories
         })
 
-class PostDeleteView(DeleteView):
+class PostDeleteView(LoginRequiredMixin, DeleteView):
     model = Post
     success_url = '/'
     template_name = 'community/delete.html'

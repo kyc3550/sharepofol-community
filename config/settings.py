@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.naver',
     'accounts',
+    'disqus',
 ]
 
 MIDDLEWARE = [
@@ -164,5 +165,7 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
-SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
+
+DISQUS_WEBSITE_SHORTNAME = 'share-pofo'
+SITE_ID = 1
