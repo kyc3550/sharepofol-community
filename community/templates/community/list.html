@@ -29,6 +29,7 @@
               {% for c in categories %}
               <a href="#" data-filter=".{{c.name}}">{{c.name}}</a>
               {% endfor %}
+              <a href="{% url 'community:post_upload' %}"><i class="fas fa-plus fa-2x" style='color:darkgray'></i></a>
             </div>
           </div>
         </div>

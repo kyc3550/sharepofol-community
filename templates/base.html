@@ -33,7 +33,7 @@
         
             <div class="container">
               <a class="navbar-brand" href="/">SHARE POFO.</a>
-              <a href="{% url 'community:post_upload' %}"><i class="fas fa-plus fa-2x" style='color:darkgray'></i></a>
+              
                 <div align="right">
                     {% if user.is_authenticated %}
                         <a href="#">{{ user.get_username }}</a>
