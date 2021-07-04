@@ -29,8 +29,8 @@
               {% for c in categories %}
               <a href="#" data-filter=".{{c.name}}">{{c.name}}</a>
               {% endfor %}
-              <a href="{% url 'community:post_upload' %}"><i class="fas fa-plus fa-2x" style='color:darkgray'></i></a>
             </div>
+            <a href="{% url 'community:post_upload' %}"><i class="fas fa-plus fa-2x" style='color:darkgray'></i></a>
           </div>
         </div>
         <div id="portfolio-grid" class="row no-gutter" data-aos="fade-up" data-aos-delay="200">
@@ -39,8 +39,9 @@
                 <a href="{{post.get_absolute_url}}" class="item-wrap fancybox">
                 <div class="work-info">
                     <h6>{{post.author.username}}</h6>
-                    <h2>{{post.title}}</h2>
+                    <h3>{{post.title}}</h3>
                     <span>{{post.category.name}}</span>
+                    <p><i class="fas fa-eye"></i>{{post.hits}}</p>                    
                 </div>
                 {% for photo in post.photo_set.all|slice:"1" %}
                 <img class="img-fluid" src="{{ photo.image.url }}">
