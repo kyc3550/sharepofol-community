@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-10-04T06:30:42.774Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36" etag="ULAxKn110Xo_GLp6d3-G" version="15.4.1" type="github">
+<mxfile host="app.diagrams.net" modified="2021-10-04T06:36:10.622Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36" etag="AqJHJEXN0OajPPcfEp3i" version="15.4.1" type="github">
   <diagram id="kgpKYQtTHZ0yAKxKKP6v" name="Page-1">
-    <mxGraphModel dx="1221" dy="681" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="583" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1483" dy="827" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -112,7 +112,7 @@
           <mxGeometry x="630" y="80" width="100" height="600" as="geometry" />
         </mxCell>
         <mxCell id="u28G30YTxyB6MNuOs4cs-28" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="u28G30YTxyB6MNuOs4cs-18">
-          <mxGeometry x="40" y="360" width="20" height="120" as="geometry" />
+          <mxGeometry x="40" y="360" width="20" height="130" as="geometry" />
         </mxCell>
         <mxCell id="u28G30YTxyB6MNuOs4cs-20" value="list.html" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
           <mxGeometry x="760" y="80" width="100" height="600" as="geometry" />
@@ -144,10 +144,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="u28G30YTxyB6MNuOs4cs-39" value="detail.html" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="880" y="80" width="100" height="600" as="geometry" />
+          <mxGeometry x="1060" y="80" width="100" height="600" as="geometry" />
         </mxCell>
         <mxCell id="u28G30YTxyB6MNuOs4cs-44" value="delete.html" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="1000" y="80" width="100" height="600" as="geometry" />
+          <mxGeometry x="1180" y="80" width="100" height="600" as="geometry" />
         </mxCell>
         <mxCell id="u28G30YTxyB6MNuOs4cs-46" value="post_delete" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;entryX=-0.156;entryY=0.368;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="u28G30YTxyB6MNuOs4cs-44" target="u28G30YTxyB6MNuOs4cs-48">
           <mxGeometry relative="1" as="geometry">
@@ -158,13 +158,11 @@
         <mxCell id="u28G30YTxyB6MNuOs4cs-48" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="u28G30YTxyB6MNuOs4cs-44">
           <mxGeometry x="40" y="410" width="20" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="u28G30YTxyB6MNuOs4cs-47" value="PostDeleteView" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1">
+        <mxCell id="u28G30YTxyB6MNuOs4cs-47" value="PostDeleteView" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="u28G30YTxyB6MNuOs4cs-48">
           <mxGeometry x="-0.6791" y="26" relative="1" as="geometry">
             <mxPoint x="1040" y="530" as="sourcePoint" />
             <mxPoint x="690" y="530" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="690" y="530" />
-            </Array>
+            <Array as="points" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
@@ -176,12 +174,12 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="u28G30YTxyB6MNuOs4cs-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="u28G30YTxyB6MNuOs4cs-28">
+        <mxCell id="u28G30YTxyB6MNuOs4cs-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="812" y="540" as="targetPoint" />
+            <mxPoint x="690" y="560" as="sourcePoint" />
+            <mxPoint x="812" y="560" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="690" y="540" />
-              <mxPoint x="812" y="540" />
+              <mxPoint x="812" y="560" />
             </Array>
           </mxGeometry>
         </mxCell>
